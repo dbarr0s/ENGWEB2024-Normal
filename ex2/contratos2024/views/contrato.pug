@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-black
+      h1 titulo
+    .w3-container 
+      ul.w3-ul.w3-card-4(style="width:100%")
+        li 
+          b ID do Contrato:
+          span #{contrato.idcontrato}
+        li 
+          b Tipo de Procedimento:
+          span #{contrato.tipoprocedimento}
+        li 
+          b Objecto do Contrato:
+          span #{contrato.objectoContrato}
+        li 
+          b Data de Publicação:
+          span #{contrato.dataPublicacao}
+        li 
+          b Data de Celebração do Contrato:
+          span #{contrato.dataCelebracaoContrato}
+        li 
+          b Preço Contratual:
+          span #{contrato.precoContratual}
+        li 
+          b Prazo de Execução:
+          span #{contrato.prazoExecucao}
+        li 
+          b NIPC da Entidade Comunicante:
+          span #{contrato.NIPC_entidade_comunicante}
+        li 
+          b Entidade Comunicante:
+          span #{contrato.entidade_comunicante}
+        li 
+          b Fundamentação:
+          span #{contrato.fundamentacao}
+
+  footer.w3-container.w3-black 
+    a.w3-button.w3-(href="/contratos") Voltar à lista dos contratos
+    h5 Gerado por EngWeb2024 em #{data}

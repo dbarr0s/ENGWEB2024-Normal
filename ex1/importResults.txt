@@ -1,0 +1,27 @@
+1: 
+
+PS C:\Users\Diogo Barros\OneDrive - Universidade do Minho\Ambiente de Trabalho\3ºANO\2_Semestre\EWEB\contratos2024> docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                      NAMES
+27ff7e5c407f   mongo:latest   "docker-entrypoint.s…"   34 seconds ago   Up 32 seconds   0.0.0.0:27017->27017/tcp   contratos2024-mongodb-1
+
+2: 
+
+PS C:\Users\Diogo Barros\OneDrive - Universidade do Minho\Ambiente de Trabalho\3ºANO\2_Semestre\EWEB\contratos2024> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+mongo        latest    ff65a94ec485   2 weeks ago   795MB
+
+3: 
+
+PS C:\Users\Diogo Barros\OneDrive - Universidade do Minho\Ambiente de Trabalho\3ºANO\2_Semestre\EWEB\contratos2024> docker exec -it contratos2024-mongodb-1 bash              
+root@27ff7e5c407f:/# ...
+test> show dbs
+admin          40.00 KiB
+config         12.00 KiB
+contratos2024   5.88 MiB  <-----
+local          40.00 KiB
+
+test> use contratos2024
+switched to db contratos2024  <------
+
+contratos2024> show collections
+contratos2024 <--------
