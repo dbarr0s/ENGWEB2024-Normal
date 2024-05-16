@@ -1,0 +1,14 @@
+
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    depends_on:
+      - mongo-seed
+  mongo-seed:
+    image: mongo:latest
+    volumes:
+      - C:\Users\Diogo Barros\OneDrive - Universidade do Minho\Ambiente de Trabalho\3ºANO\2_Semestre\EWEB\contratos2024\contratos2024.json:/datasets/dataset.json
+    command: mongoimport --host mongodb -d contratos2024 -c contratos2024 --type json --file /datasets/dataset.json --jsonArray
